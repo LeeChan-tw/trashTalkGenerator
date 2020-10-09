@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
+const targets = require('./targets.json')
 
 
 //setting template engine
@@ -12,7 +13,7 @@ app.set('view engine', 'handlebars')
 
 //setting route
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', { targets })
 })
 
 //start Express server and listening for connections

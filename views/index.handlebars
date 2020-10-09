@@ -1,0 +1,24 @@
+<div class="container bg-secondary">
+  <div class="row justify-content-center">
+    <div class="col-auto my-4">
+      <h1>你想對誰說幹話？</h1>
+    </div>
+  </div>
+  <form action="">
+    <div class="form-row">
+      {{#each targets}}
+      <div class="form-group col-4">
+        <div class="card text-center">
+          <img src=" {{this.image}} " height="260" alt="">
+          <div class="card-body">
+            <input type="radio"><label for="" class="card-text">{{this.target}}</label>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <button type="submit" class="btn btn-dark">Ｇenerate! <i class="fas fa-archive"></i></button>
+  </form>
+
+</div>
