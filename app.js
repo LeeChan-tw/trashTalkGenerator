@@ -32,8 +32,6 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const role = req.body.target_en
   const sample = trashTalkGenerator(role)
-  console.log(sample)
-  console.log(role)
   res.render('index', { sample, targets, role })
 })
 
